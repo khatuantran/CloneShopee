@@ -2,6 +2,9 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color: #fc5a31;
+    --primary-color-second: #ffe4dd;
+    --primary-color-hover: #ffcdc1;
 }
 
 *{

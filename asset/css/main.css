@@ -79,7 +79,7 @@
     animation: fadeIn ease 0.3s;
 }
 
-.header__navbar-item--hover:hover .header__qr-code{
+.header__navbar-item--hover:hover .header__qr-code ,.header__navbar-item--hover:hover .header__notify{
     display: block;
 }
 
@@ -115,5 +115,117 @@
 
 .qr-icon-link:nth-child(1), .qr-icon-link:nth-child(3){
     margin-left: 10px;
+}
+
+/* Notification */
+.header__notify{
+    position: absolute;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    width: 400px;
+    top: 150%;
+    right: 0;
+    display: none;
+    user-select: none;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrow ease-in 0.2s;
+}
+@keyframes headerNotifyGrow{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify::before{
+    content: "";
+    border: 26px solid;
+    position: absolute;
+    top: -35px;
+    right: 17px;
+    cursor: default;
+    border-color: transparent transparent white transparent;
+}
+
+.header__notify::after{
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 24px;
+    top: -8px;
+    right: 0;
+    cursor: default;
+    background-color: transparent;
+}
+.header__notify-text{
+    color: var(--text-color);
+    font-weight: 400;
+    display: flex;
+    padding: 10px 0;
+    opacity: 0.8;
+    margin-left: 12px;
+}
+
+.header__notify-text:hover, .header__notify-item-footer:hover{
+    cursor: default;
+}
+.header__notify-list{
+    padding-left: 0;
+}
+.header__notify-item{
+
+}
+.header__notify-item-img{
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-item-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color-second);
+}
+
+.header__notify-item-link:hover{
+    background-color: var(--primary-color-hover);
+}
+
+
+.header__notify-item-link-viewed{
+    background-color: var(--white-color);
+}
+.header__notify-item-product{
+    margin-left: 12px;
+}
+
+.header__notify-item-product span{
+    display: block;
+    text-align:justify;
+}
+.header__notify-item-title{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.header__notify-item-description{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+.header__notify-item-footer{
+    padding: 12px;
+    text-align: center;
+    
+}
+.header__notify-footer-link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
 }
 
