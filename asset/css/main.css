@@ -1,5 +1,5 @@
 .header{
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0,  #f53e2d,#fe6533)
 }
 
@@ -11,7 +11,7 @@
 .header__navbar-list{
     padding-left: 0;
     list-style: none;
-    margin-top: 4px;
+    margin: 12px 0 0 0;
 }
 
 .header__navbar-item{
@@ -324,3 +324,86 @@
     background-color:var(--white-color);
     color: var(--text-color)
 }
+.header_search{
+    height: calc(var(--header-height) - var(--navbar-height));
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link_img_logo{
+    width: 166px;
+    height: 54px;
+    display: block;
+}
+.img_logo{
+    width: 202px;
+    height: 59px;
+}
+.search_bar{
+    flex: 1;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.search_input{
+    font-size: 1.4rem;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px;
+}
+.icon_search_color{
+    color: var(--white-color);
+}
+.search_bar_button{
+    height: 34px;
+    width: 60px;
+    outline: none;
+    border:none;
+    margin-right: 4px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+}
+.search_bar_button:hover{
+    background-color: var(--primary-color-hover);
+    cursor: pointer;
+}
+.header_cart{
+    display: flex;
+    align-items: flex-end;
+    width: 65px;
+    height: 40px;
+    justify-content: center;
+}
+.header_cart_btn{
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+}
+.header_cart_btn:hover{
+    cursor: pointer;
+}
+
+.icon_cart{
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
+.header_cart_count{
+    position: absolute;
+    top: -13px;
+    right: -9px;
+    background: var(--white-color);
+    border-radius: 2.75rem;
+    min-width: 28px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
